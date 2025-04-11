@@ -1,12 +1,11 @@
 IMAGE_NAME := flask-app
 
 CONTAINER_NAME := web
-COMPOSE_VERSION := 3.8
 
 COMPOSE_DEV := docker-compose.dev.yml
 COMPOSE_PROD := docker-compose.prod.yml
 
-COMPOSE := docker-compose -f
+COMPOSE := docker compose -f
 
 APP_DIR := .
 
