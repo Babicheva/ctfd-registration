@@ -36,8 +36,8 @@ services:
     restart: always
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - /etc/letsencrypt/live/path/fullchain.pem:/etc/letsencrypt/live/path/fullchain.pem
-      - /etc/letsencrypt/live/path/privkey.pem:/etc/letsencrypt/live/path/privkey.pem
+      - ./nginx/donguctfd.ru.crt:/etc/ssl/certs/donguctfd.ru.crt
+      - ./nginx/donguctfd.ru.key:/etc/ssl/private/donguctfd.ru.key
     ports:
       - 80:80
       - 443:443
