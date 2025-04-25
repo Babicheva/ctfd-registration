@@ -40,8 +40,7 @@ def send_email(recipient: str, context: dict) -> None:
         message["Subject"] = f"Регистрация на Событие"
         message.attach(MIMEText(read_html_file('src/templates/emails/email_template.html', context), "html"))
 
-        with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
-            server.starttls()
+        with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT) as server:
             server.login(SENDER_EMAIL, SENDER_PASSWORD)
             server.sendmail(SENDER_EMAIL, recipient, message.as_string())
         print(f"Email успешно отправлен на {recipient}")
