@@ -1,0 +1,14 @@
+account default
+
+host smtp.mail.ru
+port 465
+
+auth on
+user donguctf.bot@mail.ru
+password <REDACTED>
+
+from donguctf.bot@mail.ru
+
+tls on
+tls_starttls off
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
